@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Backpack Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="backpack-container">
+    <h1 class="title">🎒 My Adventure Portfolio</h1>
+    <div class="backpack">
+      <div class="pocket" data-section="about">📜 About Me</div>
+      <div class="pocket" data-section="projects">🛠️ Projects</div>
+      <div class="pocket" data-section="contact">📬 Contact</div>
+    </div>
+    <div class="info-panel" id="infoPanel">
+      <button class="close-btn" onclick="closePanel()">✖</button>
+      <div id="content"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
