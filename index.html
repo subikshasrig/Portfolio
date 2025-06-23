@@ -3,21 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Game Backpack Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Character Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="backpack-container">
-    <h1 class="title">🎒 My Adventure Portfolio</h1>
-    <div class="backpack">
-      <div class="pocket" data-section="about">📜 About Me</div>
-      <div class="pocket" data-section="projects">🛠️ Projects</div>
-      <div class="pocket" data-section="contact">📬 Contact</div>
-    </div>
-    <div class="info-panel" id="infoPanel">
-      <button class="close-btn" onclick="closePanel()">✖</button>
-      <div id="content"></div>
-    </div>
+  <div class="container">
+    <header>
+      <h1>Character</h1>
+    </header>
+
+    <section class="top-section">
+      <div class="top-left">
+        <input type="text" placeholder="Name" />
+        <label>About Me</label>
+        <textarea placeholder="Brief bio here..."></textarea>
+      </div>
+
+      <div class="top-center">
+        <div class="class-title">Character Class<br /><strong>Developer</strong></div>
+        <div class="photo">Digital Photo</div>
+      </div>
+
+      <div class="top-right">
+        <input type="text" placeholder="Freshman" />
+        <ul>
+          <li>GitHub -</li>
+          <li>LinkedIn -</li>
+          <li>Bluesky -</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="education">
+      <h3>Education</h3>
+      <div class="timeline-slider">
+        <div class="timeline-line">
+          <div class="stage" style="left: 0%;">School</div>
+          <div class="stage" style="left: 33.33%;">HS</div>
+          <div class="stage" style="left: 66.66%;">Uni</div>
+          <div class="slider-thumb" id="sliderThumb"></div>
+        </div>
+        <input type="range" id="eduSlider" min="0" max="2" step="1" value="0" />
+      </div>
+    </section>
+
+    <section class="tech-stack">
+      <h3>Tech Stack</h3>
+      <div class="stack-icons">
+        <span>P</span><span>C</span><span>F</span><span>VSC</span><span>B</span>
+        <span>...</span>
+      </div>
+    </section>
+
+    <section class="projects-work">
+      <div class="projects">
+        <h3>Projects</h3>
+        <ul>
+          <li><button>★</button> Lang1</li>
+          <li><button>♥</button> Lang2</li>
+          <li><button>☐</button> Lang3</li>
+          <li><button>☐</button> Lang4</li>
+        </ul>
+        <p>*Click for repo & details</p>
+      </div>
+
+      <div class="work">
+        <h3>Work Experience</h3>
+        <ol>
+          <li>1 ↓</li>
+          <li>2 ↓</li>
+          <li>3 ↓</li>
+          <li>4 ↓</li>
+        </ol>
+      </div>
+    </section>
   </div>
 
   <script src="script.js"></script>
