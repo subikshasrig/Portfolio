@@ -96,27 +96,43 @@ header h1 {
   background: white;
   padding: 2px 5px;
   border-radius: 5px;
+  color: #333;
+  transition: all 0.3s ease;
 }
 
-.slider-thumb {
-  position: absolute;
-  top: -8px;
-  width: 16px;
-  height: 16px;
+.stage.active {
   background: #007bff;
-  border-radius: 50%;
-  transition: left 0.3s ease;
-  transform: translateX(-50%);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
 
 #eduSlider {
   width: 100%;
   appearance: none;
   background: transparent;
+  position: absolute;
+  top: -8px;
+  height: 20px;
 }
 
 #eduSlider::-webkit-slider-thumb {
   appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -6px;
+  transition: background 0.3s;
+}
+
+#eduSlider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .tech-stack {
