@@ -1,17 +1,21 @@
 const eduSlider = document.getElementById('eduSlider');
-const sliderThumb = document.getElementById('sliderThumb');
+const stageLabels = document.querySelectorAll('.stage');
 
-function updateSliderThumb() {
+function updateStages() {
   const value = parseInt(eduSlider.value);
-  const percent = value * 33.33;
-  sliderThumb.style.left = `${percent}%`;
+
+  // Remove active state from all
+  stageLabels.forEach(label => label.classList.remove('active'));
+
+  // Highlight the correct stage
+  if (value < 33.33) {
+    stageLabels[0].classList.add('active'); // School
+  } else if (value < 66.66) {
+    stageLabels[1].classList.add('active'); // HS
+  } else {
+    stageLabels[2].classList.add('active'); // Uni
+  }
 }
 
-eduSlider.addEventListener('input', updateSliderThumb);
-window.addEventListener('load', updateSliderThumb);
-
-document.querySelectorAll(".projects button").forEach(btn => {
-  btn.addEventListener("click", () => {
-    alert("Project details will open in a new tab.");
-  });
-});
+eduSlider.addEventListener('input', updateStages);
+window.addEventListener('load', updateStages);
