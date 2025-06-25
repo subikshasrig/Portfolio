@@ -35,11 +35,13 @@
       margin-bottom: 2rem;
     }
 
-    .top-left, .top-right {
+    .top-left,
+    .top-right {
       flex: 1;
     }
 
-    .top-left input, .top-right input {
+    .top-left input,
+    .top-right input {
       display: block;
       margin-bottom: 10px;
       padding: 0.5rem;
@@ -73,6 +75,23 @@
       border-radius: 50%;
       line-height: 100px;
       margin: 0 auto;
+    }
+
+    .level-section {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .level-icon {
+      width: 40px;
+      height: auto;
+    }
+
+    .level-input {
+      flex-grow: 1;
+      padding: 0.4rem 0.6rem;
     }
 
     .education {
@@ -112,7 +131,6 @@
       box-shadow: 0 0 5px rgba(0,0,0,0.2);
     }
 
-    /* Slider styling */
     #eduSlider {
       width: 100%;
       appearance: none;
@@ -195,7 +213,10 @@
       </div>
 
       <div class="top-right">
-        <input type="text" placeholder="Freshman" />
+        <div class="level-section">
+          <img src="Level icon.png" alt="Level Icon" class="level-icon" />
+          <input type="text" placeholder="Freshman" class="level-input" />
+        </div>
         <ul>
           <li>GitHub -</li>
           <li>LinkedIn -</li>
@@ -253,15 +274,14 @@
 
     function updateStages() {
       const value = parseInt(eduSlider.value);
-
       stageLabels.forEach(label => label.classList.remove('active'));
 
       if (value < 33.33) {
-        stageLabels[0].classList.add('active'); // School
+        stageLabels[0].classList.add('active');
       } else if (value < 66.66) {
-        stageLabels[1].classList.add('active'); // HS
+        stageLabels[1].classList.add('active');
       } else {
-        stageLabels[2].classList.add('active'); // Uni
+        stageLabels[2].classList.add('active');
       }
     }
 
