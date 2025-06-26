@@ -77,26 +77,22 @@
       margin: 0 auto;
     }
 
-    .level-section-vertical {
+    .level-section {
       display: flex;
-      flex-direction: column;
       align-items: center;
+      gap: 1rem;
       margin-bottom: 1rem;
     }
 
     .level-icon {
       width: 120px;
       height: auto;
-      margin-bottom: 0.5rem;
     }
 
     .level-input {
-      width: 100px;
-      padding: 0.3rem 0.5rem;
+      width: 120px;
+      padding: 0.4rem 0.6rem;
       font-size: 0.9rem;
-      text-align: center;
-      border: 2px solid #007bff;
-      border-radius: 6px;
     }
 
     .education {
@@ -218,18 +214,8 @@
       </div>
 
       <div class="top-right">
-        <div class="level-section-vertical">
+        <div class="level-section">
           <img src="level-icon.png" alt="Level Icon" class="level-icon" />
-          <select id="levelSelect" class="level-select">
-            <option value="50">Semester 1</option>
-            <option value="40">Semester 2</option>
-          </select>
-          <div class="level-bar">
-            <div class="level-bar-fill" id="levelBarFill"></div>
-          </div>
-        </div>
-
-          <img src="Level icon.png" class="level-icon" />
           <input type="text" placeholder="Freshman" class="level-input" />
         </div>
         <ul>
