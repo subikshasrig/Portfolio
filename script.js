@@ -1,37 +1,32 @@
+// ===== Education Slider ===== //
 const eduSlider = document.getElementById('eduSlider');
 const stageLabels = document.querySelectorAll('.stage');
 
 function updateStages() {
   const value = parseInt(eduSlider.value);
-
-  // Remove active state from all
   stageLabels.forEach(label => label.classList.remove('active'));
 
-  // Highlight the correct stage
   if (value < 33.33) {
-    stageLabels[0].classList.add('active'); // School
+    stageLabels[0].classList.add('active');
   } else if (value < 66.66) {
-    stageLabels[1].classList.add('active'); // HS
+    stageLabels[1].classList.add('active');
   } else {
-    stageLabels[2].classList.add('active'); // Uni
+    stageLabels[2].classList.add('active');
   }
 }
 
 eduSlider.addEventListener('input', updateStages);
 window.addEventListener('load', updateStages);
 
-<script>
-  const levelSelect = document.getElementById('levelSelect');
-  const levelBarFill = document.getElementById('levelBarFill');
+// ===== Level Dropdown & Progress Bar ===== //
+const levelSelect = document.getElementById('levelSelect');
+const levelBarFill = document.getElementById('levelBarFill');
 
-  levelSelect.addEventListener('change', () => {
-    const value = levelSelect.value;
-    levelBarFill.style.width = value + '%';
-  });
+function updateLevelBar() {
+  const value = levelSelect.value;
+  levelBarFill.style.width = value + '%';
+}
 
-  // Set initial value
-  window.addEventListener('load', () => {
-    levelBarFill.style.width = levelSelect.value + '%';
-  });
-</script>
+levelSelect.addEventListener('change', updateLevelBar);
+window.addEventListener('load', updateLevelBar);
 
