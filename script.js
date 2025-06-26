@@ -19,3 +19,19 @@ function updateStages() {
 
 eduSlider.addEventListener('input', updateStages);
 window.addEventListener('load', updateStages);
+
+<script>
+  const levelSelect = document.getElementById('levelSelect');
+  const levelBarFill = document.getElementById('levelBarFill');
+
+  levelSelect.addEventListener('change', () => {
+    const value = levelSelect.value;
+    levelBarFill.style.width = value + '%';
+  });
+
+  // Set initial value
+  window.addEventListener('load', () => {
+    levelBarFill.style.width = levelSelect.value + '%';
+  });
+</script>
+
